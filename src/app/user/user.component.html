@@ -1,6 +1,18 @@
 <div class="user-body">
-    <div>
+    <div class="user-title">
         This is the user module
     </div>
+    <div class="user-form">
+        <form [formGroup]="userSearch" (ngSubmit)="onSubmit()">
+            <div>
+                <label for="user-label">User Name</label>
+                <input class="user-input" type="text" formControlName="userName">
+            </div>
 
+            <button class="button" tpye="submit">Search</button>
+        </form>
+    </div>
+    <div class="user-data">
+        data will be displayed here
+    </div>
 </div>

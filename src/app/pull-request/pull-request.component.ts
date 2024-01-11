@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-pull-request',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrl: './pull-request.component.css'
 })
 export class PullRequestComponent {
+  constructor(
+    private formBuilder : FormBuilder
+  ) {}
 
+  pullRequestSearch = this.formBuilder.group({
+    userName: '',
+    repoName: ''
+  })
+
+  onSubmit(): void {
+    console.log(this.pullRequestSearch.value);
+    this.pullRequestSearch.reset();
+  }
 }

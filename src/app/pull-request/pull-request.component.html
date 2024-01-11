@@ -2,5 +2,22 @@
     <div>
         This is the pull request module
     </div>
+    <div class="pr-form">
+        <form [formGroup]="pullRequestSearch" (ngSubmit)="onSubmit()">
+            <div>
+                <label for="user-label">User Name</label>
+                <input class="user-input" type="text" formControlName="userName">
+            </div>
 
+            <div>
+                <label for="repo-label">Repository</label>
+                <input class="repo-input" type="text" formControlName="repoName">
+            </div>
+
+            <button class="button" tpye="submit">Search</button>
+        </form>
+    </div>
+    <div class="pr-data">
+        data will be displayed here
+    </div>
 </div>
