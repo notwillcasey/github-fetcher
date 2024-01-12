@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { RepoService } from './repo.service';
+import { Repo } from '../interfaces/repo.interface';
 
 @Component({
   selector: 'app-repo',
@@ -7,8 +9,11 @@ import { FormBuilder } from '@angular/forms';
   styleUrl: './repo.component.css'
 })
 export class RepoComponent {
+  repoData: Repo[];
+  
   constructor(
-    private formBuilder : FormBuilder
+    private formBuilder : FormBuilder,
+    private repoService: RepoService
   ) {}
 
   repoSearch = this.formBuilder.group({
@@ -16,7 +21,10 @@ export class RepoComponent {
   })
 
   onSubmit(): void {
-    console.log(this.repoSearch.value);
+    let userName = this.repoSearch.get(['userName'])?.value;
+    this.repoService.getUserProfile(userName).subscribe((repo) => {
+      this.repoData = repo;
+    })
     this.repoSearch.reset();
   }
 }

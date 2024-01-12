@@ -13,6 +13,8 @@
         </form>
     </div>
     <div class="repo-data">
-        data will be displayed here
+        <div *ngFor="let repo of repoData">
+            <div>{{ repo.name }}</div>
+        </div>
     </div>
 </div>
