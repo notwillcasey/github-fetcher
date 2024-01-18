@@ -2,7 +2,7 @@ export interface User {
     login?: string;
     id?: number;   
     nodeId?: string;
-    avatarUrl?: string;
+    avatar_url?: string;
     gravatarId?: string;
     url?: string;
     htmlUrl?: string;

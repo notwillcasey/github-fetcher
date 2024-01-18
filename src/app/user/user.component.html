@@ -2,7 +2,7 @@
     <div class="user-title">
         This is the user module
     </div>
-    <div class="user-form">
+    <div class="user-form form">
         <form [formGroup]="userSearch" (ngSubmit)="onSubmit()">
             <div>
                 <label for="user-label">User Name</label>
@@ -12,7 +12,10 @@
             <button class="button" tpye="submit">Search</button>
         </form>
     </div>
-    <div class="user-data" *ngIf="userProfileData">
-        <div>{{userProfileData.name}}</div>
+    <div class="user-data">
+        <div *ngIf="userProfileData" ><img cImg rounded src="{{userProfileData.avatar_url}}" height="200px" /></div>
+        <div><span>Name: </span><span *ngIf="userProfileData">{{userProfileData.name}}</span></div>
+        <div><span>Username: </span><span *ngIf="userProfileData">{{userProfileData.login}}</span></div>
+        <div><span>Profile URL: </span><span *ngIf="userProfileData">{{userProfileData.url}}</span></div>
     </div>
 </div>
