@@ -1,11 +1,28 @@
 .pr-title {
-    background-color: lightsalmon;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .pr-form {
-    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
 }
 
 .pr-data {
-    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+}
+
+.pr-body {
+}
+
+button {
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10%;
+    border-width: thin;
+    padding: 0.25rem;
+    margin: 0.25rem;
 }

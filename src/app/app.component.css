@@ -1,10 +1,39 @@
 .nav-title {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 2rem;
+    padding: -5rem;
+    display: inline-flex;
+    float: left;
 }
 
 .nav-bar {
-    background-color: lightgrey;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-flex;
+    width: 100vw;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+}
+
+.nav-list {
+    display: inline-flex;
+    align-items: center;
+    float: right;
+}
+
+a:link {
+    color: orange;
+    text-decoration: none;
+}
+
+.app-body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-button {
+    margin: 1rem;
+}
+
+button {
+    color: white;
 }

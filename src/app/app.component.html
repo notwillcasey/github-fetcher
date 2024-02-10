@@ -1,11 +1,11 @@
 <nav class="nav-bar">
   <a class="nav-title">{{pageTitle}}</a>
-  <ul class="nav-list">
-    <li><a class="nav-button" routerLink="/user">User Profile</a></li>
-    <li><a class="nav-button" routerLink="/repo">Repositories</a></li>
-    <li><a class="nav-button" routerLink="/pullrequest">Pull Requests</a></li>
-  </ul>
+  <div class="nav-list">
+    <span><a class="nav-button" routerLink="/user">User Profile</a></span>
+    <span><a class="nav-button" routerLink="/repo">Repositories</a></span>
+    <span><a class="nav-button" routerLink="/pullrequest">Pull Requests</a></span>
+  </div>
 </nav>
 <div class="app-body">
-  <router-outlet></router-outlet>
+  <router-outlet></router-outlet> 
 </div>
