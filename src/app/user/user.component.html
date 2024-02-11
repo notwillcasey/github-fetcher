@@ -13,9 +13,11 @@
         </form>
     </div>
     <div class="user-data">
-        <div *ngIf="userProfileData" ><img cImg rounded src="{{userProfileData.avatar_url}}" height="200px" /></div>
-        <div><span>Name: </span><span *ngIf="userProfileData">{{userProfileData.name}}</span></div>
-        <div><span>Username: </span><span *ngIf="userProfileData">{{userProfileData.login}}</span></div>
-        <div><span>Profile URL: </span><span *ngIf="userProfileData">{{userProfileData.url}}</span></div>
+        <div class="user-data-block" *ngIf="userProfileData">
+            <div><img cImg rounded src="{{userProfileData.avatar_Url}}" height="200px" /></div>
+            <div><span>Name: </span><span>{{userProfileData.name}}</span></div>
+            <div><span>Username: </span><span>{{userProfileData.login}}</span></div>
+            <div><span>Profile URL: </span><span>{{userProfileData.url}}</span></div>
+        </div>
     </div>
 </div>
