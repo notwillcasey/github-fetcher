@@ -14,6 +14,11 @@
     justify-content: center;
 }
 
+.user-data-block {
+    justify-content: center;
+    align-items: center;
+}
+
 .user-body {
 }
 
@@ -25,4 +30,23 @@ button {
     border-width: thin;
     padding: 0.25rem;
     margin: 0.25rem;
+}
+
+img {
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+}
+
+.placeholder {
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    background-color: grey;
+}
+
+.user-profile {
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
