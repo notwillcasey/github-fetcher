@@ -1,24 +1,33 @@
 <div class="user-body">
-    <div class="user-title">
+    <!-- <div class="user-title">
         GitHub User
-    </div>
+    </div> -->
     <div class="user-form form">
         <form [formGroup]="userSearch" (ngSubmit)="onSubmit()">
             <div>
                 <label for="user-label">User Name: </label>
                 <input class="user-input" type="text" formControlName="userName">
+                <button class="button" tpye="submit">Search</button>
             </div>
 
-            <button class="button" tpye="submit">Search</button>
         </form>
     </div>
     <div class="user-data">
         <div class="user-data-block" >
-            <div class="placeholder user-profile" *ngIf="!userProfileData"></div>
-            <div class="user-profile"><img src="{{userProfileData.avatar_Url}}" *ngIf="userProfileData"/></div>
-            <div class="user-profile"><span *ngIf="!userProfileData">Name</span><span *ngIf="userProfileData">{{userProfileData.name}}</span></div>
-            <div class="user-profile"><span *ngIf="!userProfileData">Username</span><span *ngIf="userProfileData">{{userProfileData.login}}</span></div>
-            <div class="user-profile"><span *ngIf="!userProfileData">Profile URL</span><span *ngIf="userProfileData"><a href="{{userProfileData.htmlUrl}}">{{userProfileData.htmlUrl}}</a></span></div>
+            <div class="user-profile placeholder" *ngIf="!userProfileData"></div>
+            <div class="user-profile"><img src="{{userProfileData.avatarUrl}}" *ngIf="userProfileData"/></div>
+            <div class="user-profile title">
+                <div *ngIf="!userProfileData">Name</div>
+                <div *ngIf="userProfileData">{{userProfileData.name}}</div>
+            </div>
+            <div class="user-profile username">
+                <div *ngIf="!userProfileData">Username</div>
+                <div *ngIf="userProfileData">{{userProfileData.login}}</div>
+            </div>
+            <div class="user-profile url">
+                <div *ngIf="!userProfileData">Profile URL</div>
+                <div *ngIf="userProfileData"><a href="{{userProfileData.htmlUrl}}">GitHub Profile</a></div>
+                </div>
         </div>
     </div>
 </div>
